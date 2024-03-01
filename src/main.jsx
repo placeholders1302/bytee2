@@ -12,7 +12,7 @@ import App from './App';
 import Categories from './pages/Categories/Categories';
 import SignUp from './pages/SignUp/SignUp';
 import SignInSide from './pages/SignIn/SignIn';
-
+import { Auth0Provider } from '@auth0/auth0-react';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
@@ -26,6 +26,12 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Auth0Provider
+      domain='dev-5tvxg1qkelajs51e.us.auth0.com'
+      clientId='6SBKRAzwNXczcC44FkdarWjfqfBtJWlq'
+      redirectUri={window.location.origin}
+    >      
+      <RouterProvider router={router} />
+    </Auth0Provider>
   </React.StrictMode>,
 )
