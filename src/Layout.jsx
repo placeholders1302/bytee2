@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom"
-import Header from './pages/Header/Header';
+import Header from './components/Header/Header';
+import { useAuth0 } from "@auth0/auth0-react";
+import Footer from "./components/footer/Footer";
 import LogInButton from "./components/LogInButton/LogInButton";
 import LogOutButton from "./components/LogOutButton/LogOutButton";
 import Profile from "./components/Profile/Profile";
-import { useAuth0 } from "@auth0/auth0-react";
 
 function Layout() {
 
@@ -14,12 +15,13 @@ function Layout() {
     {error&&(<p>Authentication Error</p>)}
     {!error&&isLoading&&<p>Loading....</p>}
     {!error&&!isLoading&&(
-      <>        
+      <>
+        <Profile/>
         <LogInButton/>
         <LogOutButton/>
-        <Profile/>
         <Header/>
         <Outlet/>
+        <Footer/>
       </>
     )}
     </>

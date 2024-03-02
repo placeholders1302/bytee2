@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Header.css"
 import EmojiFoodBeverageIcon from '@mui/icons-material/EmojiFoodBeverage';
-import SearchBar from "../../components/SearchBar/SearchBar";
 
 function Header() {
   return (
@@ -11,8 +10,6 @@ function Header() {
       <NavLink to=""><EmojiFoodBeverageIcon/></NavLink>
 
         <NavLink to="/categories">categories</NavLink>
-
-        <SearchBar/>
 
         <p>learn on bytee</p>
 

@@ -1,5 +1,4 @@
 import './SearchBar.css'
-import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 
 function SearchBar() {
@@ -19,13 +18,13 @@ function SearchBar() {
             id='search' 
             value={search} 
             onChange={(e)=>{handleChange(e)}} 
-            placeholder='search'
+            placeholder='search for something'
             onKeyDown={(e) => {
               if (e.key === "Enter")
                 searchNow();
               }}
         />
-        <SearchIcon onClick={searchNow} sx={{margin:`0 10px 0 -16px`, border:'2px solid black',borderRadius:'50%', height:'32px', width:'32px',padding:'2px'}}/>
+        <div onClick={searchNow} className='getStarted'>get started!</div>
     </div>
   )
 }
