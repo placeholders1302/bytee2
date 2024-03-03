@@ -1,7 +1,7 @@
-import SearchBar from "../SearchBar/SearchBar"
 import './HeroSection.css'
 import Switch from '@mui/material/Switch';
 import { useState } from "react";
+import { NavLink } from 'react-router-dom';
 
 function HeroSection() {
     const [isHovered,hover] = useState(false)
@@ -120,18 +120,18 @@ function HeroSection() {
                     <div className="brewers">FOR BREWERS</div>
                 </div>
 
-                <div className="bigText"  style={dark?(isHovered?darkThemeBigTextHover:darkThemeBigText):lightTheme} onMouseEnter={handleHover} onMouseLeave={handleHover}><h1>What do you need help with?</h1></div>
+                <div className="bigText"  style={dark?(isHovered?darkThemeBigTextHover:darkThemeBigText):lightTheme} onMouseEnter={handleHover} onMouseLeave={handleHover}><h1>bytee: where skills and sips unite.</h1></div>
 
                 <div className="smallText"  style={dark?darkTheme:lightTheme}><p>Discover potential collaborators for your college interests.</p></div>
 
-                <SearchBar/>
+                <NavLink to='search'><button>Search for anything</button></NavLink>
 
                 <div className="popularCategories"  style={dark?darkTheme:lightTheme}>
                     <p>popular</p>
-                    <div className="niche"></div>
-                    <div className="niche"></div>
-                    <div className="niche"></div>
-                    <div className="niche"></div>
+                    <div className="niche">Web Development.</div>
+                    <div className="niche">UI/UX.</div>
+                    <div className="niche">AI/ML</div>
+                    <div className="niche">Content Writing.</div>
                 </div>
 
             </div>

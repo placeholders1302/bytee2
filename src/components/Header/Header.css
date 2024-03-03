@@ -3,9 +3,15 @@
 }
 
 .navbar{
-    border: 2px solid black;
-
+    position: fixed;
+    font-size: 20px;
+    width: 100dvw;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+}
+
+.navbar h1{
+    display: inline;
 }
